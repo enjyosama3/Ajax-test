@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Item Searhc Design</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/activity_tracking.css" />
+<link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="font-awesome/css/all.min.css">
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+
+
+
+<body>
+    <div class="homepage-container">
+        <div class="pagecontent">
+
+            <!-- Start Upper Navbar -->
+            <div class="upper-bar" style="padding: 10px; ">
+                <div class="row">
+                    <div class="col-sm" style="text-align: left; margin-left: 10px;font-weight: bold;font-size:18px">
+                        <a href="tester.html" style="text-decoration: none;" class="home-page">Page Name</a>
+                    </div>
+                    <div class="col-sm" style="text-align: right;width: 10px;">
+                        <i class="far fa-user-circle" style="font-size: 18px; margin: 5px"></i> Hi, Username <i class="fas fa-bell" style="font-size: 14px; margin:5px;"></i> <i class="fas fa-ellipsis-v" style="font-size: 14px; margin:5px; margin-right:10px"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- End Upper Navbar -->
+
+            <!-- Start Second Bar containing 6 links for social media websites-->
+            <div class="second-bar d-none d-md-none d-lg-none d-xl-block d-md-none d-xs-none">
+                <div class="container2">
+                    <div class="row">
+                        <div class="col-sm">
+                            <a style="text-decoration: none;" href="https://www.google.com/">
+                                <div class="pointing-link" id="pointing-link">Section One</div>
+                            </a>
+                        </div>
+                        <div class="col-sm">
+                            <a style="text-decoration: none;" href="https://web.facebook.com/">
+                                <div class="pointing-link" id="pointing-link">Section Two</div>
+                            </a>
+                        </div>
+                        <div class="col-sm">
+                            <a style="text-decoration: none;" href="https://twitter.com/login?lang=ar">
+                                <div class="pointing-link" id="pointing-link">Section Three</div>
+                            </a>
+                        </div>
+                        <div class="col-sm">
+                            <a style="text-decoration: none;" href="https://eg.linkedin.com/">
+                                <div class="pointing-link" id="pointing-link">Section Four</div>
+                            </a>
+                        </div>
+                        <div class="col-sm">
+                            <a style="text-decoration: none;" href="https://www.instagram.com/">
+                                <div class="pointing-link" id="pointing-link">Section Five</div>
+                            </a>
+                        </div>
+                        <div class="col-sm">
+                            <a style="text-decoration: none;" href="https://ask.fm/">
+                                <div class="pointing-link" id="pointing-link">Section Six</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Second Bar-->
+
+            <!-- Second Bar Menu only hidden for x-large screens-->
+            <div class=" section-menu d-xl-none" style="padding:10px; background-color:#fff; color: #000; font-weight: bold;">
+                <a href="#" style="padding: 12px; font-size: 20px; text-decoration: none;" id="secondMenu">☰</a> <span style="font-size: 20px; padding:15px;"> Sections bar</span>
+            </div>
+            <div id="sectionmenu" style="font-weight: lighter; padding: 10px;padding-bottom: 0; display:none;width: 18%; float: left;margin:5px; position: absolute; z-index: 300; background-color: rgba(0, 0, 0); opacity:0.9;color: #fff;">
+                <l class="list-group list-group-flush" id="itemMenu" style="background-color: transparent; color:#fff; list-style: decimal ;border-radius: 7px">
+                    <li class="list-group-item" id="bacon"> <a href="#" style="text-decoration: none; color: #fff">Section One </a></li>
+                    <li class="list-group-item" id="bacon"> <a href="#" style="text-decoration: none; color: #fff">Section Two </a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Section Three</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Section Four </a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Section Five</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Section Six</a></li>
+                </l>
+            </div>
+
+            <!--Start Search Lable-->
+
+            <div class="input-group flex-nowrap" style="padding: 20px; background-color: #ECECEC;">
+                <div class="user-name" style=" font-size: 25px;font-weight: bold;padding-left: 30px; padding-right: 30px;">Item Name</div>
+                <input type="text" style="width: 50px; border-radius: 0px;" class="form-control" placeholder="Search For Item" aria-label="Username" aria-describedby="addon-wrapping" id="searchitem">
+                <div class="searchicon" style="margin-left:15px; margin-right: 60px;" id="search">
+                    <i class="fas fa-search" style="padding: 2px; padding-top: 10px; padding-left: 8px; border-radius:0px"></i>
+                </div>
+            </div>
+            <!--End Search Lable-->
+
+            <!--Hide items bar only in x-large screen-->
+            <div class="items-bar d-xl-none" style="background-color: #4cbb17; color:#fff; padding:10px">
+                <a href="#" style="padding: 12px; font-size: 20px; text-decoration: none;">☰</a> <span style="font-size: 20px; padding:15px;"> items bar</span>
+            </div>
+            <div id="item-menu" style="border:solid;border-radius: 2px;font-weight: lighter; padding: 10px;padding-bottom: 0; display:none;width: 22%; float: left;margin:5px; position: absolute; z-index: 300; background-color: rgba(0, 0, 0); opacity:0.9;color: #fff;">
+                <ul class="list-group" id="itemMenu" style="background-color: transparent; color:#fff;border-radius: 7px">
+                    <li class="list-group-item" data-toggle="modal" data-target="#myModal">
+                        <div style="left:0; text-align: left">+ Add New Item</div>
+                    </li>
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <input type="text" name="itemToAdd" id="myInput" />
+                                <button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn" value="submit">Add</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <li class="list-group-item" id="bacon"> <a href="#" style="text-decoration: none; color: #fff">Bacon </a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Toast</a></li>
+                    <li class="list-group-item" id="#"> <a href="bacon" style="text-decoration: none; color: #fff">Bacon </a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Toast</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Car</a></li>
+                </ul>
+            </div>
+
+            <!--Show people/tags bar only in small and x-small screens-->
+            <div class="people-bar d-sm-block d-xs-block d-md-none d-lg-none d-xl-none" style="background-color: rgb(8,82, 109, 0.9); color:#fff; padding:10px">
+                <a href="#" style="padding: 12px; font-size: 20px; text-decoration: none;">☰</a> <span style="font-size: 20px; padding:15px;"> People/Tags bar</span>
+            </div>
+            <div id="people-menu" style="border:solid;border-radius: 5px;font-weight: lighter; padding: 10px;padding-bottom: 0; display:none;width: 25%; float: left;margin:5px; position: absolute; z-index: 300; background-color: rgba(0, 0, 0); opacity:0.9;color: #fff;">
+                <ul class="list-group" id="itemMenu" style="background-color: transparent; color:#fff;border-radius: 7px">
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff"><i class="fas fa-user-friends" style=" padding-right: 7px;"></i>People</a></li>
+                    <li class="list-group-item" id="#"> <a href="#" style="text-decoration: none; color: #fff"><i class="fas fa-tags" style=" padding-right: 7px;"></i>Tags </a></li>
+                </ul>
+            </div>
+
+            <!-- Making two asides: samll and large-->
+            <div class="asides-container" style="margin-bottom: 1px;margin-top: 0px;">
+                <!--display items menu only in x-large screen-->
+                <aside class="sm-side d-none d-md-none d-lg-none d-xl-table-cell d-md-none d-xs-none">
+                    <ul class="list-group" id="itemMenu" style="opacity: 0.8; background-color: transparent; color:#fff;">
+                        <li class="list-group-item" data-toggle="modal" data-target="#myModal" style="font-weight: bold;">
+                            <div style="left:0; text-align: left">+ Add New Item
+                                <aside style="float: right; text-align: right; font-weight: lighter;"><i class="fas fa-filter"></i></aside>
+                            </div>
+                        </li>
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <input type="text" name="itemToAdd" id="myInput" />
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn" value="submit">Add</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <li class="list-group-item" id="bacon"> <a href="bacon.html" style="text-decoration: none; color: #fff">Bacon </a></li>
+                        <li class="list-group-item"> <a href="toast" style="text-decoration: none; color: #fff">Toast</a></li>
+                        <li class="list-group-item"> <a href="car" style="text-decoration: none; color: #fff">Car</a></li>
+                        <li class="list-group-item" id="bacon"> <a href="bacon" style="text-decoration: none; color: #fff">Bacon </a></li>
+                        <li class="list-group-item"> <a href="toast" style="text-decoration: none; color: #fff">Toast</a></li>
+                    </ul>
+
+                </aside>
+
+                <aside class="lg-side">
+
+                    <!--Start of people/tag section-->
+                    <div class="panel panel-default d-none d-md-none d-lg-block d-xl-block d-md-block d-xs-none d-sm-none" style="text-align: center;  padding: 20px; padding-top: 0;">
+                        <div class="panel-body">
+                            <div class="row" style="border-width: 2px; border-radius: 10px; border-style: solid; border-color: rgb(8,82, 109, 0.9); height: 35px; ">
+                                <div class="col-md-6" style="padding-top: 5px;background-color: rgb(8,82, 109, 0.9); color: #fff; left: 0; border-top-left-radius: 3px;border-bottom-left-radius: 3px;">People</div>
+                                <div class="col-md-6" style="color:rgb(8,82, 109, 0.9);padding-top: 5px"><span>Tags</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of people/tag section-->
+
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-sm">
+                            <p style="text-align: left; font-weight: bold; font-size: 30px;">Label</p>
+                            <p style="text-align: left; font-weight: bold; font-size: 15px;">Label</p>
+                            <p style="text-align: left; font-weight: bold; font-size: 15px;">Label</p>
+                            <p style="text-align: left; font-weight: bold; font-size: 15px;">Label</p>
+                        </div>
+
+                        <aside style="display:block; float: right">
+                            <div style="margin:10px; cursor: pointer;"> <i class="far fa-edit"></i> &nbsp Edit Item </div>
+                            <div style="margin:10px;cursor: pointer;"> <i class="far fa-copy"></i> &nbsp Copy Item </div>
+                            <div style="margin:10px;cursor: pointer;"> <i class="fas fa-share-alt"></i> &nbsp Share Item </div>
+                            <div style="margin:10px;cursor: pointer;"> <i class="fas fa-filter"></i> &nbsp Filter Items </div>
+                            <button type="button" class="btn btn-success" style="border-radius:0px; width:100%; background-color:#4cbb17">Results</button>
+                        </aside>
+                    </div>
+
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-sm" style="text-align: left; font-size: 30px; font-weight: bold;">100 Items</div>
+                        <div class="col-sm" style="text-align: right; font-size: 20px; margin-top: 7px;">100 Items</div>
+                    </div>
+
+
+                    <div class="row" style="margin-top: 10px; border-top: 1px solid; border-color: #b5b5b5;">
+                        <aside class="lg-side" style="text-align: left; margin-top:20px;float: left; width: 80%;">
+                            <div class="row">
+                                <aside class="sm-in-side" style="width:20%;text-align: center; float: left;padding-right: 10px;"><i class="far fa-user-circle" style="border-radius: 50%; font-size:100px"></i></aside>
+                                <aside class="lg-in-side" style="width:80%;text-align: left;float: right;">
+                                    <span style="font-size: 30px; font-weight: bold;">Bacon</span><br>Label<br> Label Label Label Label Label Label vLabel Label Label Label Label vLabel Label Label Label.
+                                </aside>
+                            </div>
+                        </aside>
+                        <aside class="sm-side" style="text-align: right; margin-top: 20px; font-weight: bold; width: 20%; float:right;background-color:transparent; color: #000; padding:5px;padding-top: 20px;">100 React <br> 50 Comment</aside>
+                    </div>
+                    <div class="row" style=" border-top: 1px solid; border-color: #b5b5b5;">
+                        <aside class="lg-side" style="text-align: left; margin-top:20px;float: left; width: 80%;">
+                            <div class="row">
+                                <aside class="sm-in-side" style="width:20%;text-align: center; float: left; padding-right: 10px;"><i class="far fa-user-circle" style="border-radius: 50%; font-size:100px"></i></aside>
+                                <aside class="lg-in-side" style="width:80%;text-align: left;float: right;">
+                                    <span style="font-size: 30px; font-weight: bold;">Toast</span><br>Label<br> Label Label Label Label Label Label vLabel Label Label Label Label vLabel Label Label Label.
+                                </aside>
+                            </div>
+                        </aside>
+                        <aside class="sm-side" style="text-align: right; margin-top: 20px; font-weight: bold; width: 20%; float:right;background-color:transparent; color: #000; padding:5px;padding-top: 20px;">50 React <br> 30 Comment</aside>
+                    </div>
+
+                    <div class="row" style="border-top: 1px solid;border-bottom: 1px solid;border-color: #b5b5b5;">
+                        <aside class="lg-side" style="text-align: left; margin-top:20px;float: left; width: 80%;">
+                            <div class="row">
+                                <aside class="sm-in-side" style="width:20%;text-align: center; float: left; padding-right: 10px;"><i class="far fa-user-circle" style="border-radius: 50%; font-size:100px"></i></aside>
+                                <aside class="lg-in-side" style="width:80%;text-align: left;float: right;">
+                                    <span style="font-size: 30px; font-weight: bold;">Car</span><br>Label<br> Label Label Label Label Label Label vLabel Label Label Label Label vLabel Label Label Label.
+                                </aside>
+                            </div>
+                        </aside>
+                        <aside class="sm-side" style="text-align: right; margin-top: 20px; font-weight: bold; width: 20%; float:right;background-color:transparent; color: #000; padding:5px;padding-top: 20px;">70 React <br> 40 Comment</aside>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer>
+            <div class="row" style="background-color: rgb(236,236, 236, 0.8); padding: 20px; color:#43464b;">
+                <div class="col-sm">
+                    <h3>Company Name</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisting elit. Nunc maximus, nulls ut commodo sagittis, sapien due mattis dui, non pulvinsr lorem felis nec erat</p>
+                    <i class="fab fa-facebook-square" style="margin: 5px"></i> <i class="fab fa-youtube-square" style="margin: 5px"></i> <i class="fab fa-twitter-square" style="margin: 5px"></i>
+                </div>
+
+                <div class="col-sm">
+                    <h3>Contact Info</h3>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color: #43464b">Button 1</button>
+                    <br>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color: #43464b">Button 2</button>
+                    <br>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color: #43464b">Button 3</button>
+                    <br>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color:#43464b">Button 4</button>
+                </div>
+                <div class="col-sm">
+                    <h3>Label Three</h3>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color: #43464b">Button 1</button>
+                    <br>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color: #43464b">Button 2</button>
+                    <br>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color:#43464b">Button 3</button>
+                    <br>
+                    <button type="button" class="btn btn-link" style="text-decoration: none; color:#43464b">Button 4</button>
+                </div>
+
+            </div>
+
+            <div id="footer-nmenu" style="font-weight: lighter; padding: 10px;padding-bottom: 0; display:none;width: 18%; float: left;margin:5px; position: float; z-index: 300; background-color: rgba(0, 0, 0); opacity:0.9;color: #fff;">
+                <ul class="list-group list-group-flush" id="itemMenu" style="background-color: transparent; color:#fff;">
+                    <li class="list-group-item" id="bacon"> <a href="#" style="text-decoration: none; color: #fff">Home</a></li>
+                    <li class="list-group-item" id="bacon"> <a href="#" style="text-decoration: none; color: #fff">About</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Services</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Works</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">News</a></li>
+                    <li class="list-group-item"> <a href="#" style="text-decoration: none; color: #fff">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="w-100" content="width=device-width" style="background-color: #06142f; color: #fff ; padding-top:5px; padding-bottom: 5px;">
+                <div class="row">
+                    <div class="col-sm" style="margin:2px">
+                        <p style="margin-left:20px; padding-top:5px">@ 2017 Company Name, All Rights Reserved</p>
+                    </div>
+                    <div class="col-sm d-none d-md-none d-lg-none d-xl-table-cell d-md-none d-xs-none" style="text-align: right">
+                        <button type="button" class="btn btn-link" style="text-decoration: none; margin:2px; margin-left:30px; color: #fff">Home</button> <button type="button" class="btn btn-link" style="text-decoration: none; margin:2px;color: #fff">About</button>                        <button type="button" class="btn btn-link" style="text-decoration: none; margin:2px;color: #fff">Services</button> <button type="button" class="btn btn-link" style="text-decoration: none; margin:2px; color: #fff">Works</button>
+                        <button type="button" class="btn btn-link" style="text-decoration: none; margin:2px; color: #fff">News</button> <button type="button" class="btn btn-link" style="text-decoration: none; margin:2px;color: #fff">Contact</button>
+                    </div>
+                    <div class="footer-bar d-xl-none" style="text-align:right; padding:10px" id="footer-sign">
+                        <a href="#" style="padding: 12px; font-size: 20px; text-decoration: none;">☰</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script href="js/jquery.js"></script>
+    <script href="js/my-jquery.js"></script>
+    <script href="js/main.js"></script>
+
+    <script>
+        jQuery.noConflict();
+        // Use jQuery via jQuery() instead of via $()
+        jQuery(document).ready(function() {
+            jQuery(".section-menu").click(function() {
+                jQuery("#sectionmenu").slideToggle(300);
+            });
+            jQuery(".items-bar").click(function() {
+                jQuery("#item-menu").slideToggle(300);
+            });
+            jQuery(".footer-bar").click(function() {
+                jQuery("#footer-menu").slideDown(300);
+            });
+            jQuery(".people-bar").click(function() {
+                jQuery("#people-menu").slideToggle(300);
+            });
+            jQuery("#myBtn").click(function() {
+                var out = jQuery('#myINPUT').val();
+                var itemlist = jQuery('#itemMenu').append('<li class="list-group-item">' + out + '</li>');
+                jQuery('#itemMenu').html(itemlist);
+                event.preventDefault();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
